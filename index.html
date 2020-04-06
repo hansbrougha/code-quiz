@@ -1,31 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
-    <script defer src="script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"/>
+    <link href="Assets/css/style.css" rel="stylesheet" />
+    <script defer src="Assets/scripts/script.js"></script>
     <title>Timed Quiz</title>
+  </head>
+  <body>
     
-</head>
-<body>
     <div class="container">
-        <div id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class= "btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
-            </div>
-
-        <div class="controls">
-            <button id="start-btn" id="start-btn" class="start-btn btn">Start</button>
-            <button id="next-btn" id="next-btn" class="next-btn btn hide">Next</button>
-        </div>   
-
+      <header class="row d-flex p-2 bd-highlight">
+        <div class="col-12 bg-primary">
         </div>
+        <ul class="nav justify-content-center bg-info col-12">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">JAVASCRIPT QUIZ |</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="js-startTimer" href="#quest1">Start Quiz!</a>
+          </li>
+        </ul>
+      </header>
+
+      <div class="row d-flex p-2 bd-highlight text-light">
+        <div class="col bg-primary">
+          <p><span class="js-timeout"></span></p>
+        </div>
+        <div class="col bg-primary">
+          Score: 
+        </div>
+      </div>
+      <div class="row d-flex p-2 bd-highlight">
+        <div class="col bg-primary">
+          
+        </div>
+        <div class="col-6">
+          <div class="jumbotron justify-center bg-white">
+            <p class="lead">
+              10 questions in 100 Seconds. Incorrect Answers are subtracted from
+              your score
+            </p>
+            <hr class="my-4" />
+            <p>Click the Button to Start Quiz!</p>
+            <a class="btn btn-primary btn-lg" href="#quest1" role="button">Start Quiz!</a>
+          </div>
+        </div>
+        <div class="col bg-primary">
+          
+        </div>
+      </div>
+      <div class="row d-flex p-2 bd-highlight justify-con">
+        <div class="col bg-primary">
+          Time: <p id="startTimer"></p>
+        </div>
+        <div class="col bg-primary">
+          Score: 
+        </div>
+      </div>
+      
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            1 of 3
+          </div>
+          <div class="col-6">
+            <div id="quest1" class="jumbotron justify-center">
+              <div>
+                Where in your html page should you insert your Javascript code?
+              </div>
+              <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">A: &lt;body&gt;</button>
+                <button type="button" class="btn btn-success">B: &lt;head&gt;</button>
+                <button type="button" class="btn btn-warning">
+                  C: A and B are correct.
+                </button>
+                <button type="button" class="btn btn-danger">
+                  D: In your CSS file, dummy!
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            3 of 3
+          </div>
+        </div>
+
+    <div class="container">
+
+      <div id="quest2" class="jumbotron justify-center">
+        <div>
+          Where in your html page should you insert your Javascript code?
+        </div>
+        <div class="btn-group-vertical">
+          <button type="button" class="btn btn-primary">A: &lt;body&gt;</button>
+          <button type="button" class="btn btn-success">B: &lt;head&gt;</button>
+          <button type="button" class="btn btn-warning">
+            C: A and B are correct.
+          </button>
+          <button type="button" class="btn btn-danger">
+            D: In your CSS file, dummy!
+          </button>
+        </div>
+      </div>
     </div>
-   
-</body>
+
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
