@@ -10,7 +10,7 @@ document.getElementById("myDIV").innerHTML = "#quest1";
 
 var interval;
 
-function countdown() {
+/*function countdown() {
   clearInterval(interval);
   interval = setInterval( function() {
       var timer = $('.js-timeout').html();
