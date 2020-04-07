@@ -1,4 +1,47 @@
-var starBtn = document.querySelector(#)
+var startQuiz = document.getElementById("startBtn");
+startCount.addEventListener("click", startCount);
+quizQuests.addEventListener("click", quizQuests);
+
+//Click Event Starts Countdown from 100 AND populates first question into main div.
+function startCount() {
+  //Count down from 100
+}
+
+function quizCycle() {
+  var quizQuests = [
+    {
+      question: "What is an object in Javascript.",
+      answers: {
+        A:
+          "An object is a collection of properties, and a property is an association between a name (or key) and a value.",
+        B:
+          "A code snippet that can be called by other code or by itself, or a variable that refers to the function.",
+        C: "A container for storing data values.",
+      },
+      correctAnswer: "A",
+    },
+    {
+      question: "What is a function?",
+      answers: {
+        A: "A block of code designed to perform a particular task.",
+        B: "An object.",
+        C: "A and B.",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+  ];
+}
+
+/*var startBtn = document.querySelector(#)
 
 function beginQuiz() {
     
