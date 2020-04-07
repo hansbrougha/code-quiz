@@ -1,11 +1,31 @@
-var startQuiz = document.getElementById("startBtn");
-startCount.addEventListener("click", startCount);
-quizQuests.addEventListener("click", quizQuests);
+//var startQuiz = document.getElementById("startBtn");
+//startCount.addEventListener("click", startCount);
+//quizQuests.addEventListener("click", quizQuests);
+//
+////Click Event Starts Countdown from 100 AND populates first question into main div.
+//function startCount() {
+//  //Count down from 100
+//}
+//
+var startBtn = document.querySelector(".start-btn");
+console.log(startBtn);
+var secondsLeft = 100;
+startBtn.addEventListener("click", function (event) {
+  setTime();
+  //function call for first question.
+  console.log(event);
+});
+function setTime() {
+  var id = setInterval(function () {
+    secondsLeft--;
+    console.log(secondsLeft);
 
-//Click Event Starts Countdown from 100 AND populates first question into main div.
-function startCount() {
-  //Count down from 100
+    if (secondsLeft === 0) {
+      clearInterval(timerInterval);
+    }
+  }, 1000);
 }
+//Access html element where you display time, bring into javascript, use google or class activities to display the seconds left on to html. Make a variable that has a string with your name in it and get your name to display.
 
 function quizCycle() {
   var quizQuests = [
