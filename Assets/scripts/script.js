@@ -10,6 +10,7 @@
 var startBtn = document.querySelector(".start-btn");
 console.log(startBtn);
 var timeEl = document.querySelector(".time");
+var questEl =
 
 var secondsLeft = 100;
 
@@ -137,68 +138,7 @@ function beginQuiz() {
 }
 document.getElementById("myDIV").innerHTML = "#quest1";
 
-var interval;
 
-/*function countdown() {
-  clearInterval(interval);
-  interval = setInterval( function() {
-      var timer = $('.js-timeout').html();
-      timer = timer.split(':');
-      var minutes = timer[0];
-      var seconds = timer[1];
-      seconds -= 1;
-      if (minutes < 0) return;
-      else if (seconds < 0 && minutes != 0) {
-          minutes -= 1;
-          seconds = 59;
-      }
-      else if (seconds < 10 && length.seconds != 2) seconds = '0' + seconds;
-
-      $('.js-timeout').html(minutes + ':' + seconds);
-
-      if (minutes == 0 && seconds == 0) clearInterval(interval);
-  }, 1000);
-}
-
-$('#js-startTimer').click(function () {
-  $('.js-timeout').text("2:00");
-  countdown();
-});
-
-$('#js-resetTimer').click(function () {
-  $('.js-timeout').text("2:00");
-  clearInterval(interval);
-});
-/*
-var counter = 0;
-var timeleft = 60;
-
-function convertSeconds(s) {
-  var min = Math.floor(s / 60);
-  var sec = s % 60;
-  return nf(min, 2) + ":" + nf(sec, 2);
-}
-console.log(convertSeconds);
-function setup() {
-  var params = getURLParams();
-  console.log(params);
-  if (params.minute) {
-    var min = params.minute;
-    timeleft = min * 60;
-  }
-  var timer = select("#timer");
-  timer.html(convertSeconds(timeLeft - counter));
-
-  function timeIt() {
-    counter++;
-    timer.html(convertSeconds(timeLeft - counter));
-    if (counter == timeLeft) {
-      counter = 0;
-    }
-  }
-  setInterval(timeIt, 1000);
-}
-console.log(setup);
 */
 //fill in below as you need
 /*var quizQuestions = ("quest1","quest2","quest3","quest4","quest5","quest6","quest7","quest8","quest9","quest10");
