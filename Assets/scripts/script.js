@@ -9,16 +9,19 @@
 //
 var startBtn = document.querySelector(".start-btn");
 console.log(startBtn);
+var timeEl = document.querySelector(".time");
+
 var secondsLeft = 100;
+
+//var time = document.querySelector(".secondsLeft");
+//console.log("time");
 startBtn.addEventListener("click", function (event) {
   setTime();
-  //function call for first question.
-  console.log(event);
 });
 function setTime() {
   var id = setInterval(function () {
     secondsLeft--;
-    console.log(secondsLeft);
+    timeEl.textContent = "Time: " + secondsLeft;
 
     if (secondsLeft === 0) {
       clearInterval(timerInterval);
@@ -30,7 +33,7 @@ function setTime() {
 function quizCycle() {
   var quizQuests = [
     {
-      question: "What is an object in Javascript.",
+      question: "What is an object in Javascript?",
       answers: {
         A:
           "An object is a collection of properties, and a property is an association between a name (or key) and a value.",
@@ -46,6 +49,69 @@ function quizCycle() {
         A: "A block of code designed to perform a particular task.",
         B: "An object.",
         C: "A and B.",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
+      },
+      correctAnswer: "C",
+    },
+    {
+      question: "Which of the following is considered an Operator?",
+      answers: {
+        A: "$",
+        B: "%=",
+        C: "##",
       },
       correctAnswer: "C",
     },
