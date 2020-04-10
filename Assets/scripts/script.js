@@ -11,6 +11,12 @@ var startBtn = document.querySelector("#start-btn");
 console.log(startBtn);
 var timeEl = document.querySelector(".time");
 var questionDisplay = document.getElementById("question");
+var questionBlock = document.getElementById("question-block");
+var A = document.getElementById("A");
+var B = document.getElementById("B");
+var C = document.getElementById("C");
+var answerBlock = document.getElementById("answerBlock");
+
 var secondsLeft = 101;
 var startMessage = document.getElementById("start-message");
 var quizQuests = [
@@ -63,13 +69,13 @@ var quizQuests = [
     correctAnswer: "A",
   },
   {
-    question: "Which of the following is considered an Operator?",
+    question: "What does it mean when a variable has a local scope?",
     answers: {
-      A: "$",
-      B: "%=",
-      C: "##",
+      A: "The variable is nested inside a function.",
+      B: "A variable sits outside of a function.",
+      C: "It refers to local storage.",
     },
-    correctAnswer: "C",
+    correctAnswer: "A",
   },
   {
     question: "Which of the following is considered an Operator?",
@@ -81,41 +87,53 @@ var quizQuests = [
     correctAnswer: "C",
   },
   {
-    question: "Which of the following is considered an Operator?",
+    question: "How do you write a single-line comment in Javascript",
     answers: {
-      A: "$",
-      B: "%=",
-      C: "##",
+      A: "//",
+      B: "*/",
+      C: "||",
     },
     correctAnswer: "C",
   },
   {
-    question: "Which of the following is considered an Operator?",
+    question: "Which of the following is a strict equality operator?",
     answers: {
-      A: "$",
-      B: "%=",
-      C: "##",
+      A: "===",
+      B: "==",
+      C: "+=",
     },
-    correctAnswer: "C",
+    correctAnswer: "A",
   },
   {
-    question: "Which of the following is considered an Operator?",
+    question:
+      "Which of the following is will be contained in a pop-up box on an HTML page?",
     answers: {
-      A: "$",
-      B: "%=",
-      C: "##",
+      A: "While",
+      B: "Confirm",
+      C: "Const",
     },
-    correctAnswer: "C",
+    correctAnswer: "B",
   },
 ];
 console.log(quizQuests);
-
-questionDisplay.textContent = quizQuests[1].question;
+var index = 0;
+answerBlock.addEventListener("click", function (event) {
+  var clickValue = event.target.attributes[0].value;
+  var answer = quizQuests[index].correctAnswer;
+  if (clickValue === answer) {
+    console.log("correct");
+  } else {
+    console.log("incorrect");
+  }
+  index++;
+  quizCycle();
+});
 
 startBtn.addEventListener("click", function (event) {
   startMessage.setAttribute("style", "display:none");
-  startMessage.setAttribute("style", "display:block");
+  questionBlock.setAttribute("style", "display:block");
   setTime();
+  quizCycle();
 });
 function setTime() {
   var id = setInterval(function () {
@@ -129,8 +147,16 @@ function setTime() {
 }
 //display block
 
-function quizCycle() {}
+function quizCycle() {
+  questionDisplay.textContent = quizQuests[index].question;
+  A.textContent = quizQuests[index].answers.A;
+  B.textContent = quizQuests[index].answers.B;
+  C.textContent = quizQuests[index].answers.C;
+}
 
+for (let i = 0; i < quizQuests.length; i++) {
+  console.log(quizQuests[i].question);
+}
 /*var startBtn = document.querySelector(#)
 
 function beginQuiz() {
