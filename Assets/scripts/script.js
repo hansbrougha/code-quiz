@@ -1,15 +1,11 @@
-//var startQuiz = document.getElementById("startBtn");
-//startCount.addEventListener("click", startCount);
-//quizQuests.addEventListener("click", quizQuests);
-//
-////Click Event Starts Countdown from 100 AND populates first question into main div.
-//function startCount() {
-//  //Count down from 100
-//}
-//
+//Start Button
 var startBtn = document.querySelector("#start-btn");
 console.log(startBtn);
+
+//Time Element Variable
 var timeEl = document.querySelector(".time");
+
+//Quiz Questions Variables
 var questionDisplay = document.getElementById("question");
 var questionBlock = document.getElementById("question-block");
 var A = document.getElementById("A");
@@ -17,8 +13,11 @@ var B = document.getElementById("B");
 var C = document.getElementById("C");
 var answerBlock = document.getElementById("answerBlock");
 
+//Countdown Variables
 var secondsLeft = 101;
 var startMessage = document.getElementById("start-message");
+
+//Questions Array
 var quizQuests = [
   {
     question: "What is an object in Javascript?",
@@ -116,6 +115,8 @@ var quizQuests = [
 ];
 console.log(quizQuests);
 var index = 0;
+
+//Add Event Listener for Question Block
 answerBlock.addEventListener("click", function (event) {
   var clickValue = event.target.attributes[0].value;
   var answer = quizQuests[index].correctAnswer;
@@ -128,12 +129,15 @@ answerBlock.addEventListener("click", function (event) {
   quizCycle();
 });
 
+//Hides Previous Div with newly populated Div
 startBtn.addEventListener("click", function (event) {
   startMessage.setAttribute("style", "display:none");
   questionBlock.setAttribute("style", "display:block");
   setTime();
   quizCycle();
 });
+
+//Countdown Function
 function setTime() {
   var id = setInterval(function () {
     secondsLeft--;
@@ -144,8 +148,7 @@ function setTime() {
     }
   }, 1000);
 }
-//display block
-
+//Displays questions and answers from quizCycle to
 function quizCycle() {
   questionDisplay.textContent = quizQuests[index].question;
   A.textContent = quizQuests[index].answers.A;
@@ -156,29 +159,3 @@ function quizCycle() {
 for (let i = 0; i < quizQuests.length; i++) {
   console.log(quizQuests[i].question);
 }
-/*var startBtn = document.querySelector(#)
-
-function beginQuiz() {
-    
-  document.getElementById();
-  document.getElementById("quest1").innerHTML = "#quest1";
-  
-}
-document.getElementById("myDIV").innerHTML = "#quest1";
-
-
-*/
-//fill in below as you need
-/*var quizQuestions = ("quest1","quest2","quest3","quest4","quest5","quest6","quest7","quest8","quest9","quest10");
-
-    if (quest1 === true){
-        document.getElementById("quest2").innerHTML = "#quest2";
-    else if 
-    }
-
-    
-    
-    First Jumbotron containing start button is displayed by default.
-        Click button to start game and countdown.
-
-*/
