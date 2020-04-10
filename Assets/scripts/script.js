@@ -7,10 +7,12 @@
 //  //Count down from 100
 //}
 //
-var startBtn = document.querySelector(".start-btn");
+var startBtn = document.querySelector("#start-btn");
 console.log(startBtn);
 var timeEl = document.querySelector(".time");
+var questionDisplay = document.getElementById("question");
 var secondsLeft = 101;
+var startMessage = document.getElementById("start-message");
 var quizQuests = [
   {
     question: "What is an object in Javascript?",
@@ -108,7 +110,11 @@ var quizQuests = [
 ];
 console.log(quizQuests);
 
+questionDisplay.textContent = quizQuests[1].question;
+
 startBtn.addEventListener("click", function (event) {
+  startMessage.setAttribute("style", "display:none");
+  startMessage.setAttribute("style", "display:block");
   setTime();
 });
 function setTime() {
@@ -117,11 +123,11 @@ function setTime() {
     timeEl.textContent = "Time: " + secondsLeft;
 
     if (secondsLeft === 0) {
-      clearInterval(timerInterval);
+      clearInterval(id);
     }
   }, 1000);
 }
-//Access html element where you display time, bring into javascript, use google or class activities to display the seconds left on to html. Make a variable that has a string with your name in it and get your name to display.
+//display block
 
 function quizCycle() {}
 
