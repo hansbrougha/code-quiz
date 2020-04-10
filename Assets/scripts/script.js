@@ -52,8 +52,7 @@ var quizQuests = [
   {
     question: "What is the purpose of console.log()?",
     answers: {
-      A:
-        "Assists with script debugging by writing information directly to the browser console.",
+      A: "Script Debugging",
       B: "Loops for conditions",
       C: "##",
     },
