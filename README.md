@@ -1,49 +1,18 @@
 # 04 Web APIs: Code Quiz
 
-########################################
+This was, by far, the most challenging assignment so far. I managed to get with a tutor to help me understand why I was having difficulty and managed to get a few things working.
 
-I WAS UNABLE TO COMPLETE THE CODE QUIZ ASSIGNMENT. WILL WORK ON IT THROUGHOUT THE WEEK.
+I started with a bootstrap layout for a responsive layout.
+I placed a div in the center of the page holding the instructions.
 
-########################################
+My script begins with a querySelector. When the first button is clicked, the quiz begins and the timer starts counting down from 100.
 
-As you proceed in your career as a web developer, you will probably be asked to complete a coding assessment, which is typically a combination of multiple-choice questions and interactive challenges. Build a timed code quiz with multiple-choice questions. This app will run in the browser and feature dynamically updated HTML and CSS powered by your JavaScript code. It will also feature a clean and polished user interface and be responsive, ensuring that it adapts to multiple screen sizes.
+My question variables are next. The answerBlock at the bottom gets the new page element/question and places it in the center div. This is followed by my countdown variables.
 
-## User Story
+This is followed by my question array, each containing 3 possible answers.
 
-```
-AS A coding bootcamp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+The addEventListener or the answer block contains a clickvalue with conditionals that display whether an answer is correct or incorrect. I didn't manage to get this to populate on the page, but is logged in a console.log.
 
-## Acceptance Criteria
+The next block fo code starting at 132. It contains an addEventListener that displays a new question div and hides the previous div.
 
-```
-GIVEN I am taking a code quiz
-WHEN I click the start button (addeventlistener)
-THEN a timer starts and I am presented with a question (timer function)
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
-```
-
-The following animation demonstrates the application functionality:
-
-![code quiz](./Assets/04-web-apis-homework-demo.gif)
-
-### Review
-
-You are required to submit the following for review:
-
-- The URL of the functional, deployed application.
-
-- The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-
-© 2019 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
+My setTime function sets the interval for my clock. The quizCycle function cycles through the questions and answers in the questions array. This is followed by a conditional. The console log logs the questions in the console.
