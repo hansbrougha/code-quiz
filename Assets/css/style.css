@@ -17,7 +17,8 @@ body {
 }
 
 .time {
-  color: white;
+  color: black;
+  align-items: center;
 }
 .container {
   width: 800px;
